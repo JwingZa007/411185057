@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#client-id {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 5px;
+}
+
+.bingo-cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.bingo-cell.marked {
+    background-color: green;
+    color: white;
+}
+
+.bingo-cell.bingo {
+    background-color: red;
+    color: white;
+}
+
+#winner-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+}
